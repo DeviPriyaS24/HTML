@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function validate()
+        {
+            var name=document.forms["RegForm"]["name"];
+            var email=document.forms["RegForm"]["email"];
+            var phone=document.forms["RegForm"]["phone"];
+            var what=document.forms["RegForm"]["what"];
+            var password=document.forms["RegForm"]["password"];
+            var address=document.forms["RegForm"]["address"];
+            if(name.value=="")
+            {
+                window.alert("Please enter your name");
+                name.focus();
+                return false;
+            }
+            if(address.value=="")
+            {
+                window.alert("Please enter your address");
+                address.focus();
+                return false;
+            }
+            if(email.value=="")
+            {
+                window.alert("Please enter your email");
+                email.focus();
+                return false;
+            }
+            if(phone.value=="")
+            {
+                window.alert("Please enter your telephone number");
+                phone.focus();
+                return false;
+            }
+            if(password.value=="")
+            {
+                window.alert("Please enter your password");
+                password.focus();
+                return false;
+            }
+            if(what.SelectedIndex<1)
+            {
+                window.alert("Please enter your course");
+                what.focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+    <style>
+        body{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">REGISTRATION FORM</h1>
+    <form name="RegForm" onsubmit="return validate()">
+        <p>Name:<input type="text" size="65" name="name"></p><br>
+        <p>Address:<input type="text" size="65" name="address"></p><br>
+        <p>Email:<input type="text" size="65" name="email"></p><br>
+        <p>Password:<input type="text" size="65" name="password"></p><br>
+        <p>Telephone:<input type="text" size="65" name="phone"></p><br>
+        <p>
+            SELECT YOUR course
+            <select type="text" value="" name="what">
+                <option>BTECH</option>
+                <option>BCA</option>
+                <option>MCA</option>
+                <option>MTECH</option>
+            </select>
+        </p><br><br>
+        <input type="submit" value="Submit" name="Submit">
+        <input type="reset" value="Reset" name="Reset">
+    </p>
+    </form>
+</body>
+</html>
