@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+    function multiply() {
+        num1 = document.getElementById("first").value;
+        num2 = document.getElementById("second").value;
+        document.getElementById("result").innerHTML = num1 * num2;
+    }
+
+    function divide() {
+        num1 = document.getElementById("first").value;
+        num2 = document.getElementById("second").value;
+        document.getElementById("result").innerHTML = num1 / num2;
+    } 
+</script>
+</head><form>
+    First Number : <input type="text" id="first" /><br>
+    Second Number: <input type="text" id="second" /><br>
+    <input type="button" onClick="multiply()" Value="Multiply" />
+    <input type="button" onClick="divide()" Value="Divide" /><br>
+    The result is:<label id="result"></label>
+</form>
+<body>
+    
+</body>
+</html>
